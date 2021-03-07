@@ -43,7 +43,25 @@ ${selectedWord
 window.addEventListener('keydown', (e) => {
   // validation to only register letters
   // using keycodes to differentiate
-  console.log(e.keyCode);
+  //   console.log(e.keyCode);
+  if (e.keyCode >= 65 && e.keyCode <= 90) {
+    // console.log(123);
+    const letter = e.key;
+
+    if (selectedWord.includes(letter)) {
+      if (!correctLetters.includes(letter)) {
+        correctLetters.push(letter);
+
+        // update word element
+        displayWord();
+      } else {
+        showNotification();
+      }
+    } else {
+      if(!wrongLetters.includes(letter)){
+        wrongLetters.push(letter);
+    }
+  }
 });
 
 displayWord();
