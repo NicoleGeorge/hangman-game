@@ -40,7 +40,11 @@ ${selectedWord
 
 // UPDATE WRONG LETTER ELEMENT
 function updateWrongLettersEl() {
-  console.log('Update wrong letter');
+  //   console.log('Update wrong letter');
+  wrongLettersEl.innerHTML = `
+    ${wrongLetters.length > 0 ? '<p>Wrong</p>' : ''}
+    ${wrongLetters.map((letter) => `<span>${letter}</span>`)}
+    `;
 }
 
 // SHOW NOTIFICATION FUNCTION
