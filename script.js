@@ -8,11 +8,11 @@ const finalMessage = document.getElementById('final-message');
 const figureParts = document.querySelectorAll('.figure-parts');
 
 // define words
-const words = ['application', 'programming', 'interface', 'wizard'];
+const words = ['application', 'programming', 'development', 'wizard'];
 
 let selectedWord = words[Math.floor(Math.random() * words.length)];
 
-const correctLetters = ['z', 'w', 'i', 'a', 'r', 'd'];
+const correctLetters = [];
 const wrongLetters = [];
 
 // SHOW HIDDEN WORD
@@ -37,5 +37,13 @@ ${selectedWord
     popup.style.display = 'flex';
   }
 }
+
+// KEY DOWN LETTER PRESS EVENT LISTENER
+
+window.addEventListener('keydown', (e) => {
+  // validation to only register letters
+  // using keycodes to differentiate
+  console.log(e.keyCode);
+});
 
 displayWord();
