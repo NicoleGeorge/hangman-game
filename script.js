@@ -12,7 +12,7 @@ const words = ['application', 'programming', 'interface', 'wizard'];
 
 let selectedWord = words[Math.floor(Math.random() * words.length)];
 
-const correctLetters = [];
+const correctLetters = ['z', 'w', 'i'];
 const wrongLetters = [];
 
 // SHOW HIDDEN WORD
@@ -29,7 +29,8 @@ ${selectedWord
   .join('')}
 `;
 
-console.log(wordEl.innerText)
+  const innerWord = wordEl.innerText.replace(/\n/g, '');
+  console.log(wordEl.innerText, innerWord);
 }
 
 displayWord();
