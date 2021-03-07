@@ -10,7 +10,7 @@
     <h1>Hangman</h1>
     <p>Find the Hidden Word - Enter a Letter</p>
     <div class="game-container">
-        <!-- ROD -->
+      <!-- ROD -->
       <svg height="250" width="200" class="figure-container">
         <line x1="60" y1="20" x2="140" y2="20" />
         <line x1="140" y1="20" x2="140" y2="50" />
@@ -24,12 +24,35 @@
         <line x1="140" y1="90" x2="140" y2="150" class="figure-part" />
         <!-- ARMS -->
         <line x1="140" y1="120" x2="100" y2="100" class="figure-part" />
-        <line x1="140" y1="120" x2="180" y2="100" class="figure-part"  />
+        <line x1="140" y1="120" x2="180" y2="100" class="figure-part" />
         <!-- LEGS -->
-        <line x1="140" y1="150" x2="120" y2="180" class="figure-part"  />
-        <line x1="140" y1="150" x2="160" y2="180" class="figure-part"  />
+        <line x1="140" y1="150" x2="120" y2="180" class="figure-part" />
+        <line x1="140" y1="150" x2="160" y2="180" class="figure-part" />
+      </svg>
+      <div class="wrong-letters-container">
+        <div id="wrong-letters">
+          <span>e, p, d, m</span>
+        </div>
+      </div>
+      <div class="word" id="word">
+        <div class="letter">H</div>
+        <div class="letter">e</div>
+        <div class="letter">l</div>
+        <div class="letter">l</div>
+        <div class="letter">o</div>
+      </div>
     </div>
-
+    <!-- Container for pop-up messages -->
+    <div class="popup-contaianer" id="popup-container">
+      <div class="popup">
+        <h2 id="final-message">You are a Winner!!</h2>
+        <button id="play-button">Play Again</button>
+      </div>
+    </div>
+    <!-- notification -->
+    <div class="notifiction-container" id="notification-container">
+      <p>You have already played this letter</p>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
