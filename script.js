@@ -38,6 +38,20 @@ ${selectedWord
   }
 }
 
+// UPDATE WRONG LETTER ELEMENT
+function updateWrongLettersEl() {
+  console.log('Update wrong letter');
+}
+
+// SHOW NOTIFICATION FUNCTION
+function showNotification() {
+  notification.classList.add('show');
+
+  setTimeout(() => {
+    notification.classList.remove('show');
+  }, 2000);
+}
+
 // KEY DOWN LETTER PRESS EVENT LISTENER
 
 window.addEventListener('keydown', (e) => {
@@ -58,8 +72,13 @@ window.addEventListener('keydown', (e) => {
         showNotification();
       }
     } else {
-      if(!wrongLetters.includes(letter)){
+      if (!wrongLetters.includes(letter)) {
         wrongLetters.push(letter);
+
+        updateWrongLettersEl();
+      } else {
+        showNotification();
+      }
     }
   }
 });
