@@ -12,7 +12,7 @@ const words = ['application', 'programming', 'interface', 'wizard'];
 
 let selectedWord = words[Math.floor(Math.random() * words.length)];
 
-const correctLetters = ['z', 'w', 'i'];
+const correctLetters = ['z', 'w', 'i', 'a', 'r', 'd'];
 const wrongLetters = [];
 
 // SHOW HIDDEN WORD
@@ -30,7 +30,12 @@ ${selectedWord
 `;
 
   const innerWord = wordEl.innerText.replace(/\n/g, '');
-  console.log(wordEl.innerText, innerWord);
+  //   console.log(wordEl.innerText, innerWord);
+
+  if (innerWord === selectedWord) {
+    finalMessage.innerText = 'YAY, You Won!!!';
+    popup.style.display = 'flex';
+  }
 }
 
 displayWord();
