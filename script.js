@@ -55,6 +55,13 @@ function updateWrongLettersEl() {
       part.style.display = 'none';
     }
   });
+
+  //   CHECK IF THE PLAYER HAS LOST - WHEN ALL PARTS ARE DISPLAYED
+  if (wrongLetters.length === figureParts.length) {
+    finalMessage.innerText = 'Bah-bohwn....you lose!';
+    popup.style.display = 'flex';
+  } else {
+  }
 }
 
 // SHOW NOTIFICATION FUNCTION
